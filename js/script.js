@@ -35,20 +35,16 @@ function showList(array) {
   });
 }
 
-function soloStrings(array)
-{
-    let arrayString = [];
-    array.forEach((element) =>
-    {
-        if(typeof element === "string" )
-          arrayString.push(element);
-    });
-
-    return arrayString;
+function soloStrings(array) {
+  let arrayString = [];
+  array.forEach((element) => {
+    if (typeof element === "string") arrayString.push(element);
+  });
+  return arrayString;
 }
 
 document.addEventListener("DOMContentLoaded", (e) => {
   // Escribe tu solución aquí
   // Sugerencia de cómo mostrar el array => showList(strangeArray);
-  showList(soloStrings(strangeArray).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase())));
+  showList(soloStrings(strangeArray).sort((a, b) =>(a.toLowerCase() > b.toLowerCase())));
 });
